@@ -1,0 +1,7 @@
+{
+    "screen":{
+        "width":800,
+        "height":600,
+        "backgroundColor":[0,0,0]
+    }
+}

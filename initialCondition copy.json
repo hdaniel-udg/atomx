@@ -1,0 +1,62 @@
+{
+    "molecules": [
+        {
+            "molecule":{
+                "name": "Water",
+                "chemicalFormula": "H2O",
+                "properties": {
+                    "numberOfAtoms": {
+                        "hydrogen": 2,
+                        "oxygen": 1
+                    },
+                    "bonds": {
+                        "type": "covalent",
+                        "length": {
+                            "H-O": "95.7 pm",
+                            "O-H": "95.7 pm"
+                        },
+                        "angle": "104.5 degrees"
+                    },
+                    "polarity": "polar",
+                    "dipoleMoment": "1.85 Debye",
+                    "molecularGeometry": "bent"
+                }
+            },
+            "number":10,
+            "colorHex":"009eff",
+            "box":"general"
+        },
+        {
+            "molecule":{
+                "name": "Ethanol",
+                "chemicalFormula": "C2H5OH",
+                "properties": {
+                    "numberOfAtoms": {
+                        "carbon": 2,
+                        "hydrogen": 6,
+                        "oxygen": 1
+                    },
+                    "bonds": {
+                        "type": "covalent",
+                        "length": {
+                            "C-C": "154 pm",
+                            "C-H": "109 pm",
+                            "C-O": "143 pm",
+                            "O-H": "96 pm"
+                        },
+                        "angle": {
+                            "C-C-C": "109.5 degrees",
+                            "C-O-H": "109.5 degrees"
+                        }
+                    },
+                    "polarity": "polar",
+                    "dipoleMoment": "1.69 Debye",
+                    "molecularGeometry": "tetrahedral (around each carbon)"
+                }
+            },
+            "number":10,
+            "colorHex":"009eff",
+            "box":"general"   
+        }
+    ]
+}
