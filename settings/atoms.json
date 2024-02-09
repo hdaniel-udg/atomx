@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Hydrogen",
+        "symbol": "H",
+        "atomicNumber": 1,
+        "atomicMass": 1.008,
+        "electronConfiguration": "1s¹",
+        "group": "1",
+        "period": 1,
+        "block": "s",
+        "stateOfMatter": "Gas",
+        "color": "Colorless",
+        "crystalStructure": "Hexagonal",
+        "density": {
+        "at0DegreesCAnd1Atm": "0.08988 g/L"
+        },
+        "meltingPoint": {
+        "at0.1MPa": "-259.14 °C"
+        },
+        "boilingPoint": {
+        "at0.1MPa": "-252.87 °C"
+        },
+        "electronegativity": 2.2,
+        "atomicRadius": 53.03,
+        "covalentRadius": 31,
+        "ionicRadius": 152,
+        "commonOxidationNumber": "+1, -1"
+    }
+]
+  

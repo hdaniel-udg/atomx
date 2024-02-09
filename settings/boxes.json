@@ -1,7 +1,8 @@
 [
     {
-        "name":"general",
+        "name":"initial",
         "display":true,
+        "block": true,
         "position":[100,100],
         "dimensions":{
             "width":200,
@@ -10,13 +11,14 @@
         "backgroundColorRGB":[206,206,206]
     },
     {
-        "name":"general1",
+        "name":"secondary",
         "display":true,
-        "position":[300,100],
+        "block": true,
+        "position":[500,200],
         "dimensions":{
             "width":200,
-            "height":500
+            "height":100
         },
-        "backgroundColorRGB":[0,255,206]
+        "backgroundColorRGB":[0,255,0]
     }
 ]
