@@ -5,10 +5,10 @@
         "block": true,
         "position":[100,100],
         "dimensions":{
-            "width":200,
-            "height":500
+            "width":100,
+            "height":300
         },
-        "backgroundColorRGB":[206,206,206]
+        "backgroundColorRGB":[0,96,255]
     },
     {
         "name":"secondary",
