@@ -1,8 +1,8 @@
 [
     {
         "name": "Hydrogen",
-        "number": 500,
-        "radiusPx":5,
+        "number": 2000,
+        "radiusNm":0.134,
         "gridType":"random",
         "colorRGB": [255, 255, 255],
         "box": "initial"

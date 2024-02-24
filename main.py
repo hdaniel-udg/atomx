@@ -6,6 +6,8 @@ import random
 import uuid
 import math
 
+# Un pixel en la pantalla equivale a un amstrong
+
 class Box(pyg.sprite.Sprite):
     def __init__(self, name, position, dimensions, background_color):
         super().__init__()
@@ -15,15 +17,15 @@ class Box(pyg.sprite.Sprite):
         pyg.draw.rect(self.image, background_color, self.image.get_rect(), width=1)  # Dibujamos el borde
 
 class Molecule(pyg.sprite.Sprite):
-    def __init__(self, boxName, position, velocity, color, diametro, mass, uuid):
+    def __init__(self, boxName, position, velocity, color, length, mass, uuid):
         super().__init__()
         self.boxName = boxName
         self.uuid = uuid
         self.mass = mass
-        self.diametro = diametro
-        self.rect = pyg.Rect(position[0], position[1], diametro, diametro)
-        self.image = pyg.Surface((diametro, diametro), pyg.SRCALPHA)
-        pyg.draw.circle(self.image, color, (diametro//2, diametro//2), diametro//2)
+        self.length = length
+        self.rect = pyg.Rect(position[0], position[1], length, length)
+        self.image = pyg.Surface((length, length), pyg.SRCALPHA)
+        pyg.draw.rect(self.image, color, self.image.get_rect(), width=0)  # Dibujamos un cuadrado sólido
         self.velocity = velocity
 
     def update(self):
@@ -38,12 +40,10 @@ class Molecule(pyg.sprite.Sprite):
         # Colisión con las cajas
         for box in boxes:
             if box.name == self.boxName:
-                if not box.rect.contains(self.rect):
-                    # Si la molécula está fuera de la caja, rebotar con la caja
-                    if self.rect.left < box.rect.left or self.rect.right > box.rect.right:
-                        self.velocity[0] *= -1
-                    if self.rect.top < box.rect.top or self.rect.bottom > box.rect.bottom:
-                        self.velocity[1] *= -1
+                if self.rect.left-self.length <= box.rect.left or self.rect.right+self.length >= box.rect.right:
+                    self.velocity[0] *= -1
+                if self.rect.top-self.length <= box.rect.top or self.rect.bottom+self.length >= box.rect.bottom:
+                    self.velocity[1] *= -1
 
         self.rect.x += self.velocity[0]
         self.rect.y += self.velocity[1]
@@ -125,13 +125,11 @@ for box_data in boxes_data:
                 mass = 0
                 for atom in atoms_data:
                     if atom['name'] == molecule_data['name']:
-                        print(atom['atomicMass'])
                         mass = atom['atomicMass']
                 for molecule in molecules_data:
                     if molecule['name'] == molecule_data['name']:
-                        #print(molecule['properties']['molecularMass'])
                         mass = molecule['properties']['molecularMass']
-                molecule = Molecule(molecule_data['box'], position, [velocity_x, velocity_y], color, molecule_data['radiusPx'], mass, uuid.uuid4())
+                molecule = Molecule(molecule_data['box'], position, [velocity_x, velocity_y], color, int(molecule_data['radiusNm']//0.1) , mass, uuid.uuid4()) #int(molecule_data['radiusNm']//0.1) Calcula la relación entre el radio atomico de van der waals en las codiciones iniciales y la correspondencia de 1px -> 1 Amstrong
                 molecules.add(molecule)
                 grid.insert(molecule)
 
@@ -170,7 +168,7 @@ while True:
 
     fps_text = font.render(f"FPS: {int(clock.get_fps())}", True, (255, 255, 255))
     for box in boxes:
-        details = pyg.font.Font(None, 15).render("Temp:",True,(255,255,255))
+        details = pyg.font.Font(None, 17).render("Temperatura:",True,(255,255,255))
         Screen.blit(details, (box.rect.x, box.rect.y - 20))
     Screen.blit(fps_text, (10, 10))
 
