@@ -3,8 +3,20 @@
         "name": "Hydrogen",
         "number": 2000,
         "radiusNm":0.134,
+        "presureAtm":1.0,
+        "temperatureKel":275.57,
         "gridType":"random",
         "colorRGB": [255, 255, 255],
         "box": "initial"
+    },
+    {
+        "name": "Hydrogen",
+        "number": 2000,
+        "radiusNm":0.134,
+        "presureAtm":1.0,
+        "temperatureKel":275.57,
+        "gridType":"random",
+        "colorRGB": [255, 0, 255],
+        "box": "secondary"
     }
 ]

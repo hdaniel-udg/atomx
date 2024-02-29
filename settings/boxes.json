@@ -2,11 +2,11 @@
     {
         "name":"initial",
         "display":true,
-        "block": true,
+        "block": false,
         "position":[100,100],
         "dimensions":{
-            "width":100,
-            "height":300
+            "width":500,
+            "height":500
         },
         "backgroundColorRGB":[0,96,255]
     },
