@@ -2,8 +2,9 @@
     {
         "name":"initial",
         "display":true,
-        "block": false,
+        "block": true,
         "position":[100,100],
+        "temperature":0.0009,
         "dimensions":{
             "width":500,
             "height":500
@@ -13,8 +14,9 @@
     {
         "name":"secondary",
         "display":true,
-        "block": true,
-        "position":[500,200],
+        "block": false,
+        "position":[200,200],
+        "temperature":287.7,
         "dimensions":{
             "width":200,
             "height":100

@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Hydrogen",
+        "number": 50,
+        "radius":5.3e-11,
+        "gridType":"random",
+        "color": "cyan",
+        "boxDimensions":[10e-9, 5e-9],
+        "temperature":40
+    },
+    {
+        "name": "Oxygen",
+        "number": 0,
+        "radius":6e-11,
+        "gridType":"random",
+        "color": "white",
+        "boxDimensions": [10e-9, 5e-9],
+        "temperature":4
+    }
+]

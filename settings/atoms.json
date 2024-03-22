@@ -3,7 +3,7 @@
         "name": "Hydrogen",
         "symbol": "H",
         "atomicNumber": 1,
-        "atomicMass": 1.008,
+        "atomicMass": 1.6735575e-27,
         "electronConfiguration": "1s¹",
         "group": "1",
         "period": 1,
@@ -25,6 +25,33 @@
         "covalentRadius": 31,
         "ionicRadius": 152,
         "commonOxidationNumber": "+1, -1"
+    },
+    {
+        "name": "Oxygen",
+        "symbol": "O",
+        "atomicNumber": 8,
+        "atomicMass": 2.6567626e-26,
+        "electronConfiguration": "1s² 2s² 2p⁴",
+        "group": "16",
+        "period": 2,
+        "block": "p",
+        "stateOfMatter": "Gas",
+        "color": "Colorless",
+        "crystalStructure": "Cubic",
+        "density": {
+            "at0DegreesCAnd1Atm": "1.429 g/L"
+        },
+        "meltingPoint": {
+            "at0.1MPa": "-218.79 °C"
+        },
+        "boilingPoint": {
+            "at0.1MPa": "-182.95 °C"
+        },
+        "electronegativity": 3.44,
+        "atomicRadius": 60.0,
+        "covalentRadius": 66,
+        "ionicRadius": 132,
+        "commonOxidationNumber": "-2"
     }
 ]
   
