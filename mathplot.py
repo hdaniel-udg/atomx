@@ -194,7 +194,7 @@ for initial in conditionData:
 plt.connect('key_press_event', on_key)
 
 # Crear la animación con intervalo y fps ajustados
-speedAnimation = 1e-14
+speedAnimation = 2e-15
 ani = FuncAnimation(fig, update, frames=None, interval=0.0001, cache_frame_data=False)
 
 # Cambiar el color del fondo dentro de los ejes a negro

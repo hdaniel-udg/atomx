@@ -1,10 +1,10 @@
 [
     {
         "name": "Hydrogen",
-        "number": 50,
+        "number": 10,
         "radius":5.3e-11,
         "gridType":"random",
-        "color": "cyan",
+        "color": "dodgerblue",
         "boxDimensions":[10e-9, 5e-9],
         "temperature":40
     },
